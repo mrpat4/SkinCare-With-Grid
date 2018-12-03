@@ -6,36 +6,10 @@ body{
 
 }
 
-.hero{
-    h1{
-        font-family: $p-font;
-        line-height: 2.1rem;
-        letter-spacing: .65rem;
-
-        #alavi{
-            font-family: $p-font;
-            color: $myRed;
-            font-size: 3.2rem;
-            line-height: 4rem;
-            letter-spacing: 1.8rem;
-        }
-    }
-}
-
 h1{
     font-family: $h1-font;
     color: $myRed;
     font-size: 2.8rem;
-    
-
-    span{
-        font-family: 'Times New Roman', Times, serif;
-        color:$myBlack;
-        display: block;
-        font-size: 1.5625rem;
-        letter-spacing: .3rem;
-    }
-
 }
 
 h2{
@@ -62,4 +36,8 @@ button{
         color: $myRed;
         background: transparent;
     }
+}
+
+img{
+    max-width: 100%;
 }

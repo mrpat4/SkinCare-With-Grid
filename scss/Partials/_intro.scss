@@ -1,0 +1,45 @@
+.intro{
+    display:flex;
+    position: relative;
+
+    @supports (display:grid){
+        display: grid;
+        grid-template-columns: minmax(4em, 1fr) minmax(auto, 30em) minmax(4em, 1fr);
+    } 
+}
+.intro-box{
+    background-color: $myBlack;
+    padding: 2em 5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2{
+        color: rgba($myGray, .9);
+
+        &::after {
+            content: "";
+            width: 30%;
+            height: 2px;
+            display: block;
+            background-color: $myYellow;
+            margin:1em auto 0;
+        }
+    }
+
+    p {
+        color: rgba(255,255,255, .7);
+    }
+
+}
+
+.intro-img-right,
+.intro-img-left {
+    img{
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}

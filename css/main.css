@@ -314,27 +314,10 @@ body {
   line-height: 1.6rem;
   font-size: 0.8 0.42rem; }
 
-.hero h1 {
-  font-family: "Open Sans", sans-serif;
-  line-height: 2.1rem;
-  letter-spacing: .65rem; }
-  .hero h1 #alavi {
-    font-family: "Open Sans", sans-serif;
-    color: #8B575C;
-    font-size: 3.2rem;
-    line-height: 4rem;
-    letter-spacing: 1.8rem; }
-
 h1 {
   font-family: "Calligraffitti", cursive;
   color: #8B575C;
   font-size: 2.8rem; }
-  h1 span {
-    font-family: 'Times New Roman', Times, serif;
-    color: #474747;
-    display: block;
-    font-size: 1.5625rem;
-    letter-spacing: .3rem; }
 
 h2 {
   color: #B8C4BB;
@@ -358,3 +341,94 @@ button {
     border: solid thin #8B575C;
     color: #8B575C;
     background: transparent; }
+
+img {
+  max-width: 100%; }
+
+.hero {
+  background-image: url(../myimg/header.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .hero h1 {
+    font-family: "Open Sans", sans-serif;
+    line-height: 2.1rem;
+    letter-spacing: .65rem; }
+    .hero h1 #alavi {
+      font-family: "Open Sans", sans-serif;
+      color: #8B575C;
+      font-size: 3.2rem;
+      line-height: 5rem;
+      letter-spacing: 1.8rem; }
+    .hero h1 span {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #474747;
+      display: block;
+      font-size: 1.5625rem;
+      letter-spacing: .1rem;
+      text-align: center;
+      line-height: 2.5rem; }
+    .hero h1::before, .hero h1::after {
+      content: "";
+      display: block;
+      width: 60%;
+      height: 2px;
+      background-color: #F2AF29;
+      margin: 0 auto; }
+    .hero h1::before {
+      margin-bottom: 1em; }
+    .hero h1::after {
+      margin-top: 1.5em; }
+
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative; }
+  @supports (display: grid) {
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(4em, 1fr) minmax(auto, 30em) minmax(4em, 1fr); } }
+
+.intro-box {
+  background-color: #474747;
+  padding: 2em 5vw;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .intro-box h2 {
+    color: rgba(184, 196, 187, 0.9); }
+    .intro-box h2::after {
+      content: "";
+      width: 30%;
+      height: 2px;
+      display: block;
+      background-color: #F2AF29;
+      margin: 1em auto 0; }
+  .intro-box p {
+    color: rgba(255, 255, 255, 0.7); }
+
+.intro-img-right img,
+.intro-img-left img {
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: block; }

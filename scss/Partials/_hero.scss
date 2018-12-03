@@ -1,0 +1,52 @@
+.hero{
+    background-image: url(../myimg/header.jpg);
+    background-size: cover;
+    background-position: center; 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    h1{
+        font-family: $p-font;
+        line-height: 2.1rem;
+        letter-spacing: .65rem;
+        
+
+        #alavi{
+            font-family: $p-font;
+            color: $myRed;
+            font-size: 3.2rem;
+            line-height: 5rem;
+            letter-spacing: 1.8rem;
+            
+        }
+
+        span{
+            font-family: Arial, Helvetica, sans-serif;
+            color:$myBlack;
+            display: block;
+            font-size: 1.5625rem;
+            letter-spacing: .1rem;
+            text-align: center;
+            line-height: 2.5rem;
+        }
+
+        &::before,
+        &::after{
+            content: "";
+            display: block;
+            width:60%;
+            height:2px;
+            background-color:$myYellow;
+            margin:0 auto;
+        }
+        &::before{
+            margin-bottom: 1em;
+        }
+        &::after{
+            margin-top: 1.5em;
+        }
+    }
+}
