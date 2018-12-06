@@ -1,0 +1,34 @@
+footer{
+    background:$myBlack;
+    text-align: center;
+    color:white;
+    padding: 2.5em 0 .5em;
+}
+.social-title{
+    font-size: 1.3rem;
+
+    &::after{
+        content: "";
+        width: 30%;
+        height: 3px;
+        background: $myYellow;
+        display: block;
+        margin: 0 auto;
+        margin-top: 1em;
+    }
+}
+
+.social-items {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-item {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.copyright {
+    font-weight: bold;
+}

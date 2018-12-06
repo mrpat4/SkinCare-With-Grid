@@ -34,9 +34,10 @@ button{
     background-color: $myRed;
     color: white;
     padding: .5em 1em;
-    transition: .2s ease-in-out;
+    transition: 250ms ease-in-out;
 
-    &:hover{
+    &:hover,
+    &focus {
         border: solid thin $myRed;
         color: $myRed;
         background: transparent;

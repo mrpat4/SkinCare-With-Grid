@@ -1,0 +1,37 @@
+.contact {
+    @include container;
+    padding: 2.5em 0;
+    h1{
+        text-align:center;
+    }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display:block;
+    padding-top: 1em;
+}
+
+input,
+textarea{
+    display: block;
+    color: $myGray;
+    background-color: lighten(lightgray, 15%);
+    border:1px solid lightgrey;
+    padding: .5em;
+    color:gray;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    width: 100%;
+
+}
+
+button {
+    display:inline-block;
+    margin-top: 1em;
+    margin-left: auto;
+}
