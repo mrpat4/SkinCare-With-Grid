@@ -1,6 +1,7 @@
 .our-methods{
     background:$myWhite;
-    padding: 2em 0;
+    padding: 2.5em 0;
+    padding-bottom: 5em;
     text-align: center;
 }
 
@@ -75,9 +76,13 @@
         display: grid;
         grid-template-columns: repeat(2,1fr);
 
+        @include mq {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
         .featured {
             grid-column: 1/3;
-            grid-row:1;
+            grid-row:1/3;
         }
     }
 }

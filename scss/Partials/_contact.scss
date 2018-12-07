@@ -9,6 +9,35 @@
 form{
     display: flex;
     flex-direction: column;
+
+    @supports (display: grid){
+        @include mq {
+            display: grid;
+            grid-column-gap: 1em;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "name    email"
+            "message message"
+            "   .     button";
+
+            .name {
+                grid-area: name;
+            }
+            .email {
+                grid-area: email;
+            }
+            .message {
+                grid-area:message;
+                textarea {
+                    height: 10em;
+                }
+
+            }
+            button {
+                grid-area: button;
+            }
+        }
+    }
 }
 
 label {
