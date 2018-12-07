@@ -312,12 +312,18 @@ body {
   color: #474747;
   font-family: "Open Sans", sans-serif;
   line-height: 1.6rem;
-  font-size: 0.8 0.42rem; }
+  font-size: .8rem; }
+  @media (min-width: 50em) {
+    body {
+      font-size: 1.2rem; } }
 
 h1 {
   font-family: "Calligraffitti", cursive;
   color: #8B575C;
   font-size: 2.8rem; }
+  @media (min-width: 50em) {
+    h1 {
+      font-size: 3.2rem; } }
 
 h2 {
   color: #B8C4BB;
@@ -325,6 +331,9 @@ h2 {
   font-size: 2rem;
   letter-spacing: .2rem;
   margin: 0; }
+  @media (min-width: 50em) {
+    h2 {
+      font-size: 2.4rem; } }
 
 p {
   margin: 0; }
@@ -367,12 +376,20 @@ img {
     font-family: "Open Sans", sans-serif;
     line-height: 2.1rem;
     letter-spacing: .65rem; }
+    @media (min-width: 50em) {
+      .hero h1 {
+        font-size: 6vw;
+        line-height: 5rem; } }
     .hero h1 #alavi {
       font-family: "Open Sans", sans-serif;
       color: #8B575C;
       font-size: 3.2rem;
       line-height: 5rem;
       letter-spacing: 1.8rem; }
+      @media (min-width: 50em) {
+        .hero h1 #alavi {
+          font-size: 6vw;
+          line-height: 5rem; } }
     .hero h1 span {
       font-family: Arial, Helvetica, sans-serif;
       color: #474747;
@@ -425,7 +442,10 @@ img {
       height: 2px;
       display: block;
       background-color: #F2AF29;
-      margin: 1em auto 0; }
+      margin: 1em auto .5em; }
+      @media (min-width: 50em) {
+        .intro-box h2::after {
+          margin: .5em auto; } }
   .intro-box p {
     color: rgba(255, 255, 255, 0.7); }
 
@@ -441,43 +461,62 @@ img {
   width: 90%;
   margin: 0 auto;
   max-width: 50em;
-  margin-top: 2em;
-  margin-bottom: 2em; }
+  margin: 2em auto; }
   .about-work::after {
     content: "";
     display: block;
     clear: both; }
 
 .about-img {
-  width: 326px; }
+  max-height: 18em; }
   @media (min-width: 40em) {
     .about-img {
       float: left;
-      margin-right: 1.5em; } }
+      margin-right: 1em; } }
 
 .about-title {
   line-height: 3.5rem;
   text-align: left;
-  margin-bottom: .5em; }
+  margin-bottom: 1em; }
 
 .about-subtitle {
-  margin: .5em 0 0; }
+  line-height: .9em;
+  margin: .1em 0; }
 
 @supports (display: grid) {
   .about-work {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr; }
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-gap: 1em; }
   .about-img {
     grid-column: 1/3;
     grid-row: 1/2; }
+    @media (min-width: 50em) {
+      .about-img {
+        max-height: 27em;
+        grid-row: 1 / 4; } }
   .about-title {
-    grid-column: 2/5;
+    grid-column: 2/4;
     grid-row: 1/2;
     -ms-flex-item-align: end;
     align-self: end; }
+    @media (min-width: 50em) {
+      .about-title {
+        font-size: 3.75rem;
+        line-height: 1.3em;
+        grid-row: 1/2;
+        margin: 0; } }
   .about-subtitle,
   .about-text {
-    grid-column: 1/5; } }
+    grid-column: 1/4; }
+    @media (min-width: 50em) {
+      .about-subtitle,
+      .about-text {
+        grid-column: 3 / 4; } }
+  .about-subtitle {
+    grid-row: 2/ 3; }
+  .about-text {
+    grid-row: 3 / 4; } }
 
 .our-methods {
   background: #E8F7EE;

@@ -12,6 +12,11 @@
         font-family: $p-font;
         line-height: 2.1rem;
         letter-spacing: .65rem;
+
+        @include mq {
+            font-size: 6vw;
+            line-height: 5rem;
+        }
         
 
         #alavi{
@@ -20,6 +25,11 @@
             font-size: 3.2rem;
             line-height: 5rem;
             letter-spacing: 1.8rem;
+
+            @include mq {
+                font-size: 6vw;
+                line-height: 5rem;
+            }
             
         }
 
