@@ -1,10 +1,10 @@
 .menu-button {
     all:unset;
     position: absolute;
-    top: 5em;
-    left: 5em;
+    top: 1em;
+    left: 1.5em;
+    transition: transform ease-out .5s;
 }
-
 .navbar {
     position: fixed;
     top: 0;
@@ -12,6 +12,8 @@
     left: 0;
     right: 15%;
     z-index: 1;
+    transform: translateX(-100%);
+    transition: transform ease-out .5s;
 
     ul {
         background: rgba($myYellow, .8);
@@ -47,4 +49,27 @@
         }
     }
     
+}
+
+.close-button {
+    display: none;
+}
+
+.nav_is_open {
+    nav{
+    transform: translateX(0);
+    }
+
+    .menu-button{
+        transform: translateX(83vw);
+        position: fixed;
+    }
+
+    .close-button {
+        display: block;
+    }
+
+    .humberger-button {
+        display: none;
+    }
 }
