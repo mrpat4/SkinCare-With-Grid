@@ -342,7 +342,7 @@ a {
   text-decoration: none;
   color: #474747; }
 
-button {
+.contact-button {
   all: unset;
   background-color: #8B575C;
   color: white;
@@ -350,7 +350,7 @@ button {
   -webkit-transition: 250ms ease-in-out;
   -o-transition: 250ms ease-in-out;
   transition: 250ms ease-in-out; }
-  button:hover, buttonfocus {
+  .contact-button:hover, .contact-buttonfocus {
     border: solid thin #8B575C;
     color: #8B575C;
     background: transparent; }
@@ -358,7 +358,56 @@ button {
 img {
   max-width: 100%; }
 
+.menu-button {
+  all: unset;
+  position: absolute;
+  top: 5em;
+  left: 5em; }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 15%;
+  z-index: 1; }
+  .navbar ul {
+    background: rgba(242, 175, 41, 0.8);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    height: 100vh;
+    font-family: "Calligraffitti", cursive;
+    font-size: 3rem;
+    letter-spacing: .2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: bold; }
+  .navbar li {
+    padding: .5em;
+    border-bottom: 1px solid #8B575C; }
+  .navbar a {
+    -webkit-transition: 300ms ease-in-out;
+    -o-transition: 300ms ease-in-out;
+    transition: 300ms ease-in-out;
+    display: inline-block;
+    width: 100%; }
+    .navbar a:hover, .navbar a:focus {
+      letter-spacing: 1rem; }
+
 .hero {
+  position: relative;
   background-image: url(../myimg/header.jpg);
   background-size: cover;
   background-position: center;
@@ -622,7 +671,7 @@ form {
           grid-area: message; }
           form .message textarea {
             height: 10em; }
-        form button {
+        form .contact-button {
           grid-area: button; } } }
 
 label {
@@ -642,7 +691,7 @@ textarea {
   box-sizing: border-box;
   width: 100%; }
 
-button {
+.contact-button {
   display: inline-block;
   margin-top: 1em;
   margin-left: auto; }
