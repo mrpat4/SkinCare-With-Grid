@@ -675,21 +675,29 @@ img {
       grid-column: 1/3;
       grid-row: 1/3; } }
 
-@-webkit-keyframes close {
+@-webkit-keyframes fade-in {
   0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
+    opacity: 0; }
   100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); } }
+    opacity: 1; } }
 
-@keyframes close {
+@keyframes fade-in {
   0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
+    opacity: 0; }
   100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); } }
+    opacity: 1; } }
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 
 .method-modal {
   position: fixed;
@@ -700,8 +708,12 @@ img {
   background: white;
   -webkit-box-shadow: 0 0 0 5em rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 0 5em rgba(0, 0, 0, 0.3);
+  z-index: 2;
   overflow-y: scroll;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  display: none; }
+  .method-modal.is-open {
+    display: block; }
 
 .modal-button {
   all: unset;
@@ -729,6 +741,18 @@ img {
   text-align: left;
   padding: 5em 0;
   margin-bottom: 2em; }
+
+.method-2 {
+  background-image: url(../../myimg/method2.jpg); }
+
+.method-3 {
+  background-image: url(../../myimg/method3.jpg); }
+
+.method-4 {
+  background-image: url(../../myimg/method4.jpg); }
+
+.method-5 {
+  background-image: url(../../myimg/method5.jpg); }
 
 .method-title-box {
   background: rgba(242, 175, 41, 0.6);

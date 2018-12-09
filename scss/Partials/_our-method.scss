@@ -91,9 +91,13 @@
 
 // portfolio modal section codes :
 
-@keyframes close {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
+@keyframes fade-in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes fade-out {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
 }
 
 .method-modal {
@@ -104,8 +108,16 @@
     right: 2em;
     background: white;
     box-shadow: 0 0 0 5em rgba(black, .3);
+    z-index: 2;
     overflow-y: scroll;
     overflow-x: hidden;
+    // animation: fade 2ms linear alternate-reverse
+
+    display: none;
+
+    &.is-open {
+        display: block;
+    }
 }
 
 .modal-button {
@@ -138,6 +150,20 @@
     padding: 5em 0;   
     margin-bottom: 2em;
 }
+.method-2{
+    background-image: url(../../myimg/method2.jpg);
+}
+.method-3{
+    background-image: url(../../myimg/method3.jpg);
+}
+.method-4{
+    background-image: url(../../myimg/method4.jpg);
+}
+.method-5{
+    background-image: url(../../myimg/method5.jpg);
+}
+
+
 
 .method-title-box {
     background: rgba($myYellow, .6);
