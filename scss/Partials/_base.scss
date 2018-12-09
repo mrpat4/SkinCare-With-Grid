@@ -45,6 +45,7 @@ a{
     background-color: $myRed;
     color: white;
     padding: .5em 1em;
+    cursor: pointer;
     transition: 250ms ease-in-out;
 
     &:hover,

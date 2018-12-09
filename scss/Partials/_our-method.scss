@@ -86,3 +86,117 @@
         }
     }
 }
+
+
+
+// portfolio modal section codes :
+
+@keyframes close {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.method-modal {
+    position: fixed;
+    top: 2em;
+    bottom: 2em;
+    left: 2em;
+    right: 2em;
+    background: white;
+    box-shadow: 0 0 0 5em rgba(black, .3);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.modal-button {
+    all: unset;
+    position: fixed;
+    top: 3em;
+    left: 1em;
+    width: 2em;
+    height: 2em;
+    padding: 4px 0 0;
+    border-radius: 50%;
+    background: rgba(white,.8);
+    // top:3em;
+    // left: 3em;
+    // padding-bottom: .5em;
+    cursor: pointer;
+    transition: 250ms linear;
+
+    &:hover,
+    &:focus{
+        transform: scale(.7, .7)
+    }
+}
+
+.method-header {
+    background-image: url(../../myimg/method1.jpeg);
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    padding: 5em 0;   
+    margin-bottom: 2em;
+}
+
+.method-title-box {
+    background: rgba($myYellow, .6);
+    width: 50%;
+    padding: 3em 2em;
+    line-height: 3rem;
+
+    h2 {
+        color:$myBlack;
+        font-weight: 800;
+        display: inline-block;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 2px;
+            background: rgba($myBlack, .6);
+            margin: .5em auto;
+        }
+    }
+
+    p{
+        color: rgba($myBlack, .8);
+        letter-spacing: .1rem;
+        line-height: 1rem; 
+        font-size: 1rem;
+    }
+}
+
+.method-content {
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 2em;
+
+    p{
+        text-align: justify;
+    }
+
+}
+
+.method-full-width {
+    width: 100vw;
+    max-width: initial;
+    margin: 1em calc(50% - 50vw);
+    height: 20vh;
+    object-fit: cover;
+}
+
+@include mq {
+    .method-right {
+        width: 65%;
+        float:right;
+        margin: 1em;
+    }
+
+    .method-left {
+        width: 65%;
+        float:left;
+        margin: 1em;
+    }
+}

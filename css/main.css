@@ -347,6 +347,7 @@ a {
   background-color: #8B575C;
   color: white;
   padding: .5em 1em;
+  cursor: pointer;
   -webkit-transition: 250ms ease-in-out;
   -o-transition: 250ms ease-in-out;
   transition: 250ms ease-in-out; }
@@ -363,6 +364,7 @@ img {
   position: absolute;
   top: 1em;
   left: 1.5em;
+  cursor: pointer;
   -webkit-transition: -webkit-transform ease-out .5s;
   transition: -webkit-transform ease-out .5s;
   -o-transition: transform ease-out .5s;
@@ -672,6 +674,108 @@ img {
     .method-items .featured {
       grid-column: 1/3;
       grid-row: 1/3; } }
+
+@-webkit-keyframes close {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes close {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.method-modal {
+  position: fixed;
+  top: 2em;
+  bottom: 2em;
+  left: 2em;
+  right: 2em;
+  background: white;
+  -webkit-box-shadow: 0 0 0 5em rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 5em rgba(0, 0, 0, 0.3);
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
+.modal-button {
+  all: unset;
+  position: fixed;
+  top: 3em;
+  left: 1em;
+  width: 2em;
+  height: 2em;
+  padding: 4px 0 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  -webkit-transition: 250ms linear;
+  -o-transition: 250ms linear;
+  transition: 250ms linear; }
+  .modal-button:hover, .modal-button:focus {
+    -webkit-transform: scale(0.7, 0.7);
+    -ms-transform: scale(0.7, 0.7);
+    transform: scale(0.7, 0.7); }
+
+.method-header {
+  background-image: url(../../myimg/method1.jpeg);
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+  padding: 5em 0;
+  margin-bottom: 2em; }
+
+.method-title-box {
+  background: rgba(242, 175, 41, 0.6);
+  width: 50%;
+  padding: 3em 2em;
+  line-height: 3rem; }
+  .method-title-box h2 {
+    color: #474747;
+    font-weight: 800;
+    display: inline-block; }
+    .method-title-box h2::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background: rgba(71, 71, 71, 0.6);
+      margin: .5em auto; }
+  .method-title-box p {
+    color: rgba(71, 71, 71, 0.8);
+    letter-spacing: .1rem;
+    line-height: 1rem;
+    font-size: 1rem; }
+
+.method-content {
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 2em; }
+  .method-content p {
+    text-align: justify; }
+
+.method-full-width {
+  width: 100vw;
+  max-width: initial;
+  margin: 1em calc(50% - 50vw);
+  height: 20vh;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+@media (min-width: 50em) {
+  .method-right {
+    width: 65%;
+    float: right;
+    margin: 1em; }
+  .method-left {
+    width: 65%;
+    float: left;
+    margin: 1em; } }
 
 .contact {
   width: 90%;
